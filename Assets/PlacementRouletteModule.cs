@@ -360,7 +360,7 @@ public class PlacementRouletteModule : MonoBehaviour
             var newFace = (int)(angle / 90);
             if (newFace != lastFace)
             {
-                ItemRenderers[(newFace + 2) % 4].material.mainTexture = ItemTextures[newFace == 28 && solved ? Answer : Rnd.Range(0, ItemTextures.Length)];
+                ItemRenderers[(newFace + 2) % 4].material.mainTexture = ItemTextures[newFace == 28 ? inputIx : Rnd.Range(0, ItemTextures.Length)];
                 lastFace = newFace;
             }
             yield return null;
