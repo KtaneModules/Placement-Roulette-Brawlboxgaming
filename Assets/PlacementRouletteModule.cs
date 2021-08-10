@@ -372,6 +372,7 @@ public class PlacementRouletteModule : MonoBehaviour
         {
             Module.HandlePass();
             isSolved = true;
+            InformationText.text = "";
             Debug.LogFormat("[Placement Roulette #{0}] Module solved!", _moduleId);
         }
         else
