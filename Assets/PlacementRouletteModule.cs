@@ -45,6 +45,9 @@ public class PlacementRouletteModule : MonoBehaviour
     private Coroutine Spinner;
     private KMAudio.KMAudioRef SpinSound;
 
+    // For Souvenir.
+    private string VehicleType, Character, Vehicle, Drift, TrackType, Track;
+
     void Start()
     {
         _moduleId = _moduleIdCounter++;
@@ -90,18 +93,18 @@ public class PlacementRouletteModule : MonoBehaviour
 
         var vTypes = new[] { "Kart", "Bike" };
         int vehicleix = Rnd.Range(0, 2);
-        var VehicleType = vTypes[vehicleix];
-        var Character = chars[ix][Rnd.Range(0, 8)];
-        var Vehicle = vehicles[ix][Rnd.Range(0, 6) + vehicleix * 6];
+        VehicleType = vTypes[vehicleix];
+        Character = chars[ix][Rnd.Range(0, 8)];
+        Vehicle = vehicles[ix][Rnd.Range(0, 6) + vehicleix * 6];
 
         var drifts = new[] { "Manual", "Automatic" };
-        var Drift = drifts[Rnd.Range(0, 2)];
+        Drift = drifts[Rnd.Range(0, 2)];
 
         var tracks = new[] { "Luigi Circuit", "Moo Moo Meadows", "Mushroom Gorge", "Toad's Factory", "Mario Circuit", "Coconut Mall", "DK Snowboard Cross", "Wario's Gold Mine", "Daisy Circuit", "Koopa Cape", "Maple Treeway", "Grumble Volcano", "Dry Dry Ruins", "Moonview Highway", "Bowser's Castle", "Rainbow Road", "GCN Peach Beach", "DS Yoshi Falls", "SNES Ghost Valley 2", "N64 Mario Raceway", "N64 Sherbet Land", "GBA Shy Guy Beach", "DS Delfino Square", "GCN Waluigi Stadium", "DS Desert Hills", "GBA Bowser Castle 3", "N64 DK's Jungle Parkway", "GCN Mario Circuit", "SNES Mario Circuit 3", "DS Peach Gardens", "GCN DK Mountain", "N64 Bowser's Castle" };
         int trackix = Rnd.Range(0, 2);
         var tTypes = new[] { "Nitro", "Retro" };
-        var TrackType = tTypes[trackix];
-        var Track = tracks[Rnd.Range(0, 16) + trackix * 16];
+        TrackType = tTypes[trackix];
+        Track = tracks[Rnd.Range(0, 16) + trackix * 16];
 
         Information = new[] { Character, Vehicle, Drift, Track };
 

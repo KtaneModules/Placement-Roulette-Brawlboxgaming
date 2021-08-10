@@ -213,7 +213,6 @@ MonoBehaviour:
   - {fileID: 114411964576108346}
   - {fileID: 114552609931901886}
   - {fileID: 114742200357249796}
-  - {fileID: 0}
   IsPassThrough: 0
   ChildRowLength: 2
   Highlight: {fileID: 11464240}
